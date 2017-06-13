@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Detalle del evento</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container padding-bottom-50">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+
+    <h2>Detalles del evento</h2>
+        <div>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Id:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${event.id}">Id</p></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Nombre del evento:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${event.name}">Ejemplo nombre</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Descripci&oacute;n del evento:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${event.description}">Ejemplo descripción</p>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label class="col-sm-2 control-label">Fecha y hora:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${event.dateAndTime}">Ejemplo fecha y hora</p></div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Lugar:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${event.place}">Ejemplo lugar</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Direcci&oacute;:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${event.address}">Ejemplo direcci&oacute;n</p>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Nombre organizador:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${event.organizerName}">Ejemplo nombre organizador</p>
+                    </div>
+                </div>  
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Email organizador:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${event.organizerEmail}">Ejemplo email organizador</p>
+                    </div>
+                </div>
+               <div class="form-group">
+                    <label class="col-sm-2 control-label">Tel&eacute;fono organizador:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${event.organizerMobilePhone}">Ejemplo tel&eacute;fono organizador</p>
+                    </div>
+                </div>                
+                
+                <div class="row text-center">
+                	<a href="#" class="btn btn-success" th:href="@{/eventos}">Volver</a>               	
+            	</div>                 
+            </form>
+    </div>
+</div>
+
+</body>
+</html>
