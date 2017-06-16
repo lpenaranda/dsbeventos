@@ -35,6 +35,7 @@ public class EventController {
      */
     @RequestMapping(value = "/eventos", method = RequestMethod.GET)
     public String list(Model model) {
+        
         model.addAttribute("events", eventService.listAllEvents());
         logger.info("Returning event list.");
         return "events";
